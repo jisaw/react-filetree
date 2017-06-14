@@ -10,10 +10,10 @@ class TreeNode extends React.Component {
         super(props);
         this.onClick = this.onClick.bind(this);
     }
-    onClick(){
+    onClick(e){
         let toggled = !this.props.node.toggled;
         let onToggle = this.props.onToggle;
-        if(onToggle){ onToggle(this.props.node, toggled); }
+        if(onToggle){ onToggle(this.props.node, toggled, e); }
     }
     animations(){
         const props = this.props;
